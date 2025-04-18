@@ -15,7 +15,7 @@ class PricingService
     public function __construct()
     {
         $this->config = Config::get('laracloud');
-        $this->apiKey = env('OPENAI_API_KEY');
+        $this->apiKey = Config::get('services.openai.api_key');
         // TODO: Allow region selection if needed in the future
     }
 
